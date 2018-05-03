@@ -7,7 +7,7 @@ class Chip {
       this.color1 = "#303F9F";
       this.color2 = "#3F51B5";
     } else {
-      this.color1 = 110;
+      this.color1 = 120;
       this.color2 = 110;
     }
     this.team = team;
@@ -15,14 +15,17 @@ class Chip {
     this.col = col;
     this.size = size;
   }
-
   isValid(chips) {
     let valid = true;
     for (let col = 1; col < 10; col++) {
       for (let row = 1; row < 10; row++) {
         if (chips[col][row]) {
           chip = chips[col][row];
-          if (chip.row <= this.row && chip.col == this.col && chip != this && chip.team) {
+          if (
+            chip.row <= this.row &&
+            chip.col == this.col &&
+            chip != this && chip.team
+          ) {
             valid = false;
           }
         }
@@ -30,8 +33,6 @@ class Chip {
     }
     return valid;
   }
-
-
   move(chips) {
     let move = true;
     let chip;
@@ -52,7 +53,6 @@ class Chip {
       return true;
     }
   }
-
   show() {
     stroke(this.color1);
     fill(this.color2);
