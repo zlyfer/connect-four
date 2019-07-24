@@ -1,0 +1,19 @@
+{
+  "name": "net.zlyfer.chat",
+  "version": "1.0.0",
+  "description": "Socket.io Chat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [
+    "socket.io",
+    "chat"
+  ],
+  "author": "Frederik 'zlyfer' Shull",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.1.1"
+  }
+}
